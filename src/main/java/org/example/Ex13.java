@@ -26,7 +26,7 @@ public class Ex13 {
         arr2 = Arrays.copyOf(odd, odd.length+even.length);
 
         for(int i=0;i< even.length;i++){
-            arr2[i+ odd.length] = even[i];
+            arr2[ i+ odd.length] = even[i];
         }
 
         System.out.println(Arrays.toString(arr2));
