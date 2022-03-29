@@ -7,28 +7,24 @@ array and the odd numbers are located in the front part (the left side). */
 import java.util.Arrays;
 
 public class Ex13 {
-
+    // java doc
     public static void main(String[] args) {
-        int[] arr1 = {12,4,3,34,456,55,35,7,1};
-        int[] arr2 = new int[9];
-        int[] even = new int[0];
-        int[] odd = new int[0];
+        int[] arr1 = {33,1,34,546,665,4,8,65,9};
+        int[] arr2 = new int[arr1.length];
 
-        for(int nr: arr1){
-            if(nr%2==0){
-                even = Arrays.copyOf(even, even.length+1);
-                even[even.length-1] = nr;
+        int back = arr1.length-1;
+        int front =0;
+
+        for(int i=0;i< arr1.length;i++){
+
+            if(arr1[i]%2==0){
+                //Even
+                arr2[back] = arr1[i];
+                back--;
             }else{
-                odd = Arrays.copyOf(odd, odd.length+1);
-                odd[odd.length-1] = nr;
+                arr2[front] = arr1[i];
+                front++;
             }
-        }
-
-
-        arr2 = Arrays.copyOf(odd, odd.length+even.length);
-
-        for(int i=0;i< even.length;i++){
-            arr2[ i+ odd.length] = even[i];
         }
 
         System.out.println(Arrays.toString(arr2));
