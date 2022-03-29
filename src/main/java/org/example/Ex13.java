@@ -23,6 +23,8 @@ public class Ex13 {
                 odd[odd.length-1] = nr;
             }
         }
+
+
         arr2 = Arrays.copyOf(odd, odd.length+even.length);
 
         for(int i=0;i< even.length;i++){
